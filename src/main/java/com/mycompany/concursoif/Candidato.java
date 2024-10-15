@@ -46,6 +46,7 @@ class Candidato implements Comparable<Candidato> {
         }
        
         return this.dataNascimento.compareTo(outro.dataNascimento); 
+        
     }
 
     @Override
