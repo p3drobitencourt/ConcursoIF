@@ -19,14 +19,13 @@ import java.util.List;
 public class ConcursoIF {
 
     public static void main(String[] args) {
-        String arquivoCSV = "caminho/do/seu/arquivo.csv"; // Defina o caminho do seu arquivo CSV
+        String arquivoCSV = "caminho/do/seu/arquivo.csv"; 
         String linha;
         List<Candidato> candidatos = new ArrayList<>();
 
-        // Leitura do arquivo CSV
         try (BufferedReader br = new BufferedReader(new FileReader(arquivoCSV))) {
             while ((linha = br.readLine()) != null) {
-                String[] dados = linha.split("\t"); // Assumindo que o separador seja TAB
+                String[] dados = linha.split("\t"); 
                 int identificador = Integer.parseInt(dados[0]);
                 String nome = dados[1];
                 String dataNascimento = dados[2];
@@ -39,10 +38,9 @@ public class ConcursoIF {
             e.printStackTrace();
         }
 
-        // Ordena a lista de candidatos
+        
         Collections.sort(candidatos);
 
-        // Imprime os candidatos ordenados
         for (Candidato candidato : candidatos) {
             System.out.println(candidato);
         }

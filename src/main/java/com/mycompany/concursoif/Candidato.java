@@ -40,12 +40,12 @@ class Candidato implements Comparable<Candidato> {
 
     @Override
     public int compareTo(Candidato outro) {
-        // Primeiro, compara as notas
+      
         if (this.nota != outro.nota) {
-            return Integer.compare(outro.nota, this.nota); // Ordem decrescente das notas
+            return Integer.compare(outro.nota, this.nota); 
         }
-        // Em caso de empate, compara a idade (mais velho vem primeiro)
-        return this.dataNascimento.compareTo(outro.dataNascimento); // Mais velho -> menor data
+       
+        return this.dataNascimento.compareTo(outro.dataNascimento); 
     }
 
     @Override
